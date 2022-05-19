@@ -40,8 +40,7 @@ void PrintArray(int[,] array)
 }
 
 // Замена четных элементов на противоположные
-
-void ChangePositiveElements(int[,] array)
+void ChangeEvenElements(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -58,5 +57,5 @@ int[,] Array = CreateArray(M, N);
 FillArray(Array);
 PrintArray(Array);
 Console.WriteLine();
-ChangePositiveElements(Array);
+ChangeEvenElements(Array);
 PrintArray(Array);
