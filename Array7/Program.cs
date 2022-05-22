@@ -42,22 +42,18 @@ void PrintArray(int[,] array)
 // Поиск суммы элементов главной диагонали
 int SumMainDiagonalElements(int[,] array)
 {
-    int Sum = 0;
-    if (array.GetLength(0) < array.GetLength(1))
+    int sum = 0;
+    if (array.GetLength(1) > array.GetLength(0))
     {
         for (int i = 0; i < array.GetLength(0); i++)
-        {
-            Sum = Sum + array[i, i];
-        }
+            sum = sum + array[i, i];
     }
     else
     {
         for (int i = 0; i < array.GetLength(1); i++)
-        {
-            Sum = Sum + array[i, i];
-        }
+            sum = sum + array[i, i];
     }
-    return Sum;
+    return sum;
 }
 
 int M = 4;
@@ -66,7 +62,7 @@ int[,] Array = CreateArray(M, N);
 FillArray(Array);
 PrintArray(Array);
 Console.WriteLine();
-Console.Write($"Сумма элементов главной диагонали = ");
-Console.WriteLine(SumMainDiagonalElements(Array));
+Console.WriteLine($"Сумма элементов главной диагонали = {SumMainDiagonalElements(Array)}");
+
 
 
