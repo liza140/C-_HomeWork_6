@@ -46,6 +46,7 @@ bool FindElements(int[,] array, int num)
     return findElements;
 }
 
+// Поиск индекса массива
 (int, int) FindIndex(int[,] array, int num)
 {
     int indI = 0;
